@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FSM-AI System - Food Order</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container" style="max-width: 600px; margin-top: 40px;">
+    <h2 class="text-center mb-4">Place Your Food Order</h2>
+    <form action="order_process.php" method="POST">
+
+      <div class="form-group">
+        <label for="budget">Budget (in FCFA)</label>
+        <input type="number" class="form-control" id="budget" name="budget" required>
+      </div>
+
+      <div class="form-group">
+        <label for="food_type">Preferred Food Type</label>
+        <input type="text" class="form-control" id="food_type" name="food_type" placeholder="e.g., rice, koki, eru" required>
+      </div>
+
+      <div class="form-group">
+        <label for="last_meal">What was your last meal?</label>
+        <input type="text" class="form-control" id="last_meal" name="last_meal" required>
+      </div>
+
+      <div class="form-group">
+        <label for="health">Your Health Condition</label>
+        <textarea class="form-control" id="health" name="health" placeholder="e.g., diabetes, high blood pressure" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" name="city" required>
+      </div>
+
+      <div class="form-group">
+        <label for="neighbohood">Neighborhood</label>
+        <input type="text" class="form-control" id="neighbohood" name="neighbohood" required>
+      </div>
+
+      <div class="form-group">
+        <label>Delivery Option</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="delivery" id="yes" value="yes" required>
+          <label class="form-check-label" for="yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="delivery" id="no" value="no">
+          <label class="form-check-label" for="no">No</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_date">Preferred Delivery Date</label>
+        <input type="date" class="form-control" id="delivery_date" name="delivery_date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="delivery_time">Preferred Delivery Time</label>
+        <input type="time" class="form-control" id="delivery_time" name="delivery_time" required>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-block">Submit Order</button>
+    </form>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

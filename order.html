@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FSM-AI - Place Your Order</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Place Your Order</h2>
+    <form action="order_process.php" method="POST">
+
+        <div class="form-group">
+            <label for="budget">Budget (CFA)</label>
+            <input type="number" class="form-control" id="budget" name="budget" required>
+        </div>
+
+        <div class="form-group">
+            <label for="food_type">Preferred Food Type</label>
+            <input type="text" class="form-control" id="food_type" name="food_type" placeholder="e.g. Eru, Ndolé" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last_meal">Last Meal Taken</label>
+            <input type="text" class="form-control" id="last_meal" name="last_meal" placeholder="e.g. Rice, Fufu" required>
+        </div>
+
+        <div class="form-group">
+            <label for="health">Your Health Condition</label>
+            <textarea class="form-control" id="health" name="health" rows="3" placeholder="e.g. Diabetic, Ulcer" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" required>
+        </div>
+
+        <div class="form-group">
+            <label for="neighborhood">Neighborhood</label>
+            <input type="text" class="form-control" id="neighborhood" name="neighborhood" required>
+        </div>
+
+        <div class="form-group">
+            <label for="delivery">Do you want delivery?</label>
+            <select class="form-control" id="delivery" name="delivery" required>
+                <option value="yes">Yes</option>
+                <option value="no">No, I will pick up</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="delivery_date">Delivery Date</label>
+            <input type="date" class="form-control" id="delivery_date" name="delivery_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="delivery_time">Delivery Time</label>
+            <input type="time" class="form-control" id="delivery_time" name="delivery_time" required>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-block">Submit Order</button>
+    </form>
+
+    <div class="text-center mt-3">
+        <a href="logout.php" class="btn btn-outline-danger">Logout</a>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
